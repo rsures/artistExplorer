@@ -187,3 +187,25 @@ songs_df['tempo'] = min_max_norm(songs_df.tempo)
 
 #create avg of track feature info
 overall_song_feature = songs_df.groupby('Artist').mean(numeric_only=True)
+
+#plot artist info
+def radar_chart (df):
+    categories = df.columns
+    fig = go.Figure(
+        layout=go.Layout(
+            polar={'radialaxis': {"showticklabels": False, "showline": False}},
+            showlegend=True,
+            template='plotly_dark',
+            width=700,
+            height=570
+        )
+    )
+    
+    for i, artist in enumerate(df.index):
+        name = df.index[i]
+        artist_features = df.iloc[i]
+        fig.add_trace(go.Scatterpolar(r=artist_features, fill='toself', theta=categories, name=name))
+        
+    py.iplot(fig)
+
+radar_chart(overall_song_feature)
