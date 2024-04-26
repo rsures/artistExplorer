@@ -28,10 +28,19 @@ To ensure that every data point has the same scale and each feature is equally i
 ## Use Case
 One of my favourite classical music periods is Baroque. I always questioned if my favourite classical musicians have any connections with my favourite modern counterparts.
 Artists I ended up choosing for Analysis: Johann Sebastian Bach, Tomaso Albinoni, Berlioz and Laufey.
+|![artist_comp_overview](https://github.com/rsures/artistExplorer/blob/main/pictures/fig1_artistInfo.png)|
+|:--:|
+|Fig. 1 - Artist Overview</b>|
 
 After user selection, a brief overview of each artist allows for a simple comparison (fig.1). It was interesting to see Laufey’s genre categorized as gen-z instead of bossa nova or even jazz.
 After identifying each artist's information, a musical profile was created based on the top 10 songs and the features that describe each audio trait. However, the aggregated average of the top 10 songs and their feature are used to visualize each artist’s music (fig. 2).
+|![artist_comp_overview](https://github.com/rsures/artistExplorer/blob/main/pictures/fig2.png)|
+|:--:|
+|Fig. 2 - Artist Song Metadata</b>|
 
 Using the Plotly library a radar chart (fig.3) is created to have a holistic view of each artist’s musical profile.
+|![artist_comp_overview](https://github.com/rsures/artistExplorer/blob/main/pictures/raderPlot.png)|
+|:--:|
+|Fig. 2 - Artist Song Metadata</b>|
 
 From these results, it’s interesting to see how similar in characteristics from each other, considering how different their genres are (classical vs jazz house).
